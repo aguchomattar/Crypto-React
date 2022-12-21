@@ -23,7 +23,7 @@ const InputSubmit = styled.input`
 	}
 `;
 
-const Formulario = () => {
+const Formulario = ({ setMonedas }) => {
 	const [cryptos, setCryptos] = useState([]);
 	const [error, setError] = useState(false);
 
@@ -63,6 +63,10 @@ const Formulario = () => {
 		}
 
 		setError(false);
+		setMonedas({
+			moneda,
+			cryptomoneda,
+		});
 	};
 
 	return (
